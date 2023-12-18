@@ -1,0 +1,52 @@
+{% extends 'global/base.html' %}
+{% load static %}
+{% block 'head' %}
+    <link href="{% static 'estoque/css/style.css' %}" rel="stylesheet">
+{% endblock 'head' %}
+
+{% block 'titulo' %}Nunes Sports{% endblock 'titulo' %}
+
+{% block 'conteudo' %}
+<section id="contact" class="intro main-bg section">
+    <div class="main-content intro-content">
+      <div class="intro-text-content">
+        <h2>Editar Produto</h2>
+        <p>Esse formulário permitirá editar um produto, incluindo nome, código, descrição e preço para melhor organização e gerenciamento.</p>
+      </div>
+      <div class="contact-form">
+        <form action="{% url "estoque:update_produto" %}" method="POST">
+        <fieldset class="form-grid">
+          <legend>Por favor, atualize as informações abaixo para editar o produto.</legend>
+           
+                {% csrf_token %}
+          <div class="form-group">
+            <label for="nome">Nome do Produto</label>
+            <input type="text" name="nome" id="nome" value="{{ produto.nome }}" placeholder="Nome">
+          </div>
+
+          <div class="form-group">
+            <label for="codicodigo_produtogo">Código do Produto</label>
+            <input type="text" name="codigo_produto" id="codigo_produto" value="{{ produto.codigo_produto }}" placeholder="Código">
+          </div>
+
+          <div class="form-group">
+            <label for="descricao">Descrição do Produto</label>
+            <input type="text" name="descricao" id="descricao" value="{{ produto.descricao }}" placeholder="Descrição">
+          </div>
+
+          <div class="form-group">
+            <label for="preco">Preço do Produto</label>
+            <input type="text" name="preco" id="preco" value="{{ produto.preco }}" placeholder="Preço">
+          </div>
+
+          <input type="text" name="pk" id="pk" value="{{ produto.pk }}" hidden>
+          <div class="form-group full-width">
+            <button type="submit">Editar</button>
+          </div>
+       
+        </fieldset>
+    </form>
+      </div>  
+    </div>
+  </section>
+{% endblock 'conteudo' %}
