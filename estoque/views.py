@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from . import models
 
 def index(request):
-    produtos = models.Produto.objects.all()
+    produtos = models.Produto.objects.filter(status=True)
     return render(request, 'estoque/index.html', {'produtos': produtos})
 
 
@@ -61,5 +61,5 @@ def delete_produto(request):
     if request.method == 'POST':
         value = request.POST.get('pk')
         if value:
-            models.Produto.objects.filter(pk=value).delete()
+            models.Produto.objects.filter(pk=value).update(status=False)
     return redirect('estoque:index')

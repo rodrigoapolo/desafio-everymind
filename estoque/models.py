@@ -5,3 +5,4 @@ class Produto(models.Model):
     codigo_produto = models.CharField(max_length=100)
     descricao = models.TextField()
     preco = models.FloatField()
+    status = models.BooleanField(default=True)

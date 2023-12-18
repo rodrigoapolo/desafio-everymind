@@ -28,7 +28,7 @@ Neste projeto, optei por utilizar o framework Django, que é conhecido pela sua 
     *Legenda: Tabela de produtos exibindo os registros.*
 
     ![Página de Cadastror](img/cadastrar.png)
-    *Legenda: Página de cadastror de um produto.*
+    *Legenda: Página de cadastrar um produto.*
 
     ![Página de Edição](img/editar.png)
     *Legenda: Página de edição de um produto específico.*
@@ -63,8 +63,6 @@ Para iniciar o projeto, siga os passos abaixo:
 ## GitHub Repository
 
 O código fonte deste projeto está disponível no repositório do GitHub. Você pode conferir e clonar o repositório [aqui](https://github.com/rodrigoapolo/desafio-everymind/tree/main).
-
-**Observação:** Mesmo que o desafio não tenha sido concluído em sua totalidade, o progresso alcançado está disponível no repositório.
 
 ## Considerações Finais
 
